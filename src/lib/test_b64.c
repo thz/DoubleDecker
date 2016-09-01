@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	base64_init_decodestate(&state_in);
 
-	int retval = base64_decode_block(binput, 32,
+	int retval = base64_decode_block(binput, 44,
 			buf, &state_in);
 
 	fprintf(stderr, "retval: %i\n", retval);
