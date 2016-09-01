@@ -1,3 +1,4 @@
+#include "../../include/cdecode.h"
 int main(int argc, char **argv)
 {
 
