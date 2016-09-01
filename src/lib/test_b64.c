@@ -9,13 +9,15 @@ int main(int argc, char **argv)
 	base64_decodestate state_in;
 
 	char *buf = calloc(1, 33);
+	buf[32] = 'B';
 
 	base64_init_decodestate(&state_in);
 
 	int retval = base64_decode_block(binput, sizeof(binput),
 			buf, &state_in);
 
-	printf("retval: %i\n", retval);
+	fprintf(stderr, "retval: %i\n", retval);
+	write(1, buf, retval);
 
 	return 0;
 }
