@@ -14,6 +14,8 @@ int main(int argc, char **argv)
 	int retval = base64_decode_block(binput, sizeof(binput),
 			buf, &state_in);
 
+	printf("retval: %i\n", retval);
+
 	return 0;
 }
 
